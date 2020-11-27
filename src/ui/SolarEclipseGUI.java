@@ -2,6 +2,7 @@ package ui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
@@ -16,7 +17,11 @@ public class SolarEclipseGUI {
 
     @FXML
     private Circle moon;
- 
+    @FXML
+    private Button buttonMove;
+
+    @FXML
+    private Button buttonStop;
     @FXML
     private Circle crater1;
 
@@ -48,6 +53,10 @@ public class SolarEclipseGUI {
         	moons[i].setMax(stage.getWidth());	
 		}
     	set.start();
+    	buttonStop.setDisable(false);
+    	buttonMove.setDisable(true);
+
+
     }
 
     @FXML
@@ -55,6 +64,10 @@ public class SolarEclipseGUI {
     	for (int i = 0; i < moons.length; i++) {
     		moons[i].setMoving(false);
 		}
+    	buttonStop.setDisable(true);
+    	buttonMove.setDisable(false);
+
+
     }
     
     public void initialize() {
@@ -63,6 +76,10 @@ public class SolarEclipseGUI {
     	moons[1]= new Moon(crater1.getLayoutX(),100L,stage.getWidth(),crater1.getRadius(),moon.getRadius()+35);
     	moons[2]= new Moon(crater2.getLayoutX(),100L,stage.getWidth(),crater2.getRadius(),moon.getRadius()+35);
     	moons[3]= new Moon(crater3.getLayoutX(),100L,stage.getWidth(),crater3.getRadius(),moon.getRadius()+44);
+    	buttonStop.setDisable(true);
+
+    	
+    	
     }
 
 	public void updateGUI() {
