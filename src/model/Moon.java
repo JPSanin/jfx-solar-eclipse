@@ -8,20 +8,21 @@ public class Moon {
 	private double max;
 	private double radius;
 	private boolean moving;
+	private double teleportDifference;
 	
-	public Moon(double x, Long sleep, int speed, double max, double radius, boolean moving) {
+	public Moon(double x, Long sleep, double max, double radius, double teleportDifference) {
 		this.x = x;
 		this.sleep = sleep;
-		this.speed = speed;
+		speed = 5;
 		this.max = max;
 		this.radius = radius;
-		this.moving = moving;
+		this.teleportDifference=teleportDifference;
+		moving = false;
 	}
 	
 	public void move() {
 		x =x + speed;
-		
-		if(x-radius>max) {
+		if(x-radius-1-teleportDifference>max) {
 			x=-radius;
 		}
 		
