@@ -63,6 +63,7 @@ public class SolarEclipseGUI {
     	moons[1]= new Moon(crater1.getLayoutX(),100L,stage.getWidth(),crater1.getRadius(),moon.getRadius()+35);
     	moons[2]= new Moon(crater2.getLayoutX(),100L,stage.getWidth(),crater2.getRadius(),moon.getRadius()+35);
     	moons[3]= new Moon(crater3.getLayoutX(),100L,stage.getWidth(),crater3.getRadius(),moon.getRadius()+44);
+    	
     }
 
 	public void updateGUI() {
