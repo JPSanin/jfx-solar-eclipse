@@ -50,6 +50,9 @@ public class SolarEclipseGUI {
     	SolarEclipseThread set= new SolarEclipseThread(moons, this);
     	for (int i = 0; i < moons.length; i++) {
     		moons[i].setMoving(true);
+    		int slideValue=(int) slider.getValue();
+    		Long sleep=(long) slideValue;
+    		moons[i].setSleep(sleep);
         	moons[i].setMax(stage.getWidth());	
 		}
     	set.start();
@@ -66,9 +69,12 @@ public class SolarEclipseGUI {
 		}
     	buttonStop.setDisable(true);
     	buttonMove.setDisable(false);
+    	slider.setDisable(false);
 
 
     }
+    
+   
     
     public void initialize() {
     	
@@ -85,7 +91,10 @@ public class SolarEclipseGUI {
 		crater1.setLayoutX(moons[1].getX());
 		crater2.setLayoutX(moons[2].getX());
 		crater3.setLayoutX(moons[3].getX());
+		slider.setDisable(true);
 	}
+
+	
     
     
 
