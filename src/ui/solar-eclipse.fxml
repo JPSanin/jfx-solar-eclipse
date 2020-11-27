@@ -5,18 +5,20 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="sky" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="772.0" style="-fx-background-color: #d5da45;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Circle fill="#f4ff1f" layoutX="378.0" layoutY="150.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle fx:id="sky" arcHeight="5.0" arcWidth="5.0" fill="#fffb29" height="400.0" layoutX="-8.0" stroke="BLACK" strokeType="INSIDE" width="781.0" />
+      <Circle fill="#ffaf21" layoutX="378.0" layoutY="150.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="buttonMove" layoutX="206.0" layoutY="274.0" mnemonicParsing="false" onAction="#moveMoon" prefHeight="47.0" prefWidth="91.0" text="Move" />
       <Button fx:id="buttonStop" layoutX="459.0" layoutY="270.0" mnemonicParsing="false" onAction="#stopMoon" prefHeight="47.0" prefWidth="91.0" text="Stop" />
       <Circle fx:id="moon" fill="#cdcbcb" layoutX="62.0" layoutY="150.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater1" layoutX="75.0" layoutY="116.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater3" fill="#949090" layoutX="97.0" layoutY="150.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater2" fill="#5b5353" layoutX="56.0" layoutY="150.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
-      <Slider fx:id="slider" layoutX="89.0" layoutY="345.0" max="500.0" min="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="600.0" value="255.0" />
+      <Slider fx:id="slider" layoutX="89.0" layoutY="345.0" min="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="600.0" value="55.0" />
       <Label layoutX="37.0" layoutY="344.0" text="Slow">
          <font>
             <Font size="18.0" />

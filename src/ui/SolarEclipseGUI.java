@@ -4,8 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
-import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import model.Moon;
 import thread.SolarEclipseThread;
@@ -13,7 +14,7 @@ import thread.SolarEclipseThread;
 public class SolarEclipseGUI {
 
     @FXML
-    private Pane sky;
+    private Rectangle sky;
 
     @FXML
     private Circle moon;
@@ -72,6 +73,21 @@ public class SolarEclipseGUI {
     	slider.setDisable(false);
 
 
+    }
+    
+    public void eclipse() {
+    	
+    	if(moon.getLayoutX()+moon.getRadius()>=378 && moon.getLayoutX()+moon.getRadius()<440) {
+    		  Color color=(Color) sky.getFill();
+    		     color=color.darker();
+    		     sky.setFill(color);
+    	}
+    	
+    	if(moon.getLayoutX()+moon.getRadius()>=440) {
+    		Color color=(Color) sky.getFill();
+ 		     color=color.brighter();
+ 		     sky.setFill(color);
+    	}  
     }
     
    

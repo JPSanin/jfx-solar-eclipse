@@ -21,7 +21,7 @@ public class SolarEclipseThread extends Thread {
 			moons[2].move();
 			moons[3].move();
 			seGUI.updateGUI();
-	
+			seGUI.eclipse();
 			try {
 				Thread.sleep(moons[0].getSleep());
 			} catch (InterruptedException e) {
