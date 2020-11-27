@@ -4,18 +4,18 @@ import model.Moon;
 import ui.SolarEclipseGUI;
 
 public class SolarEclipseThread extends Thread {
+
 	private Moon[] moons;
 	private SolarEclipseGUI seGUI;
-	
-	
+
 	public SolarEclipseThread(Moon[] moons, SolarEclipseGUI seGUI) {
 		this.moons = moons;
 		this.seGUI = seGUI;
 	}
-	
+
 	@Override
 	public void run() {
-		while(moons[0].isMoving()) {
+		while (moons[0].isMoving()) {
 			moons[0].move();
 			moons[1].move();
 			moons[2].move();
@@ -28,9 +28,5 @@ public class SolarEclipseThread extends Thread {
 				e.printStackTrace();
 			}
 		}
-		
 	}
-	
-	
-
 }

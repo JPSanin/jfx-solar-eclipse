@@ -1,7 +1,7 @@
 package model;
 
 public class Moon {
-	
+
 	private double x;
 	private Long sleep;
 	private int speed;
@@ -9,23 +9,21 @@ public class Moon {
 	private double radius;
 	private boolean moving;
 	private double teleportDifference;
-	
+
 	public Moon(double x, Long sleep, double max, double radius, double teleportDifference) {
 		this.x = x;
 		this.sleep = sleep;
 		speed = 5;
 		this.max = max;
 		this.radius = radius;
-		this.teleportDifference=teleportDifference;
+		this.teleportDifference = teleportDifference;
 		moving = false;
 	}
-	
+
 	public void move() {
-		x =x + speed;
-		if(x-radius-1-teleportDifference>max) {
-			x=-radius;
-		}
-		
+		x = x + speed;
+		if (x - radius - 1 - teleportDifference > max)
+			x = -radius;
 	}
 
 	public double getX() {
@@ -75,11 +73,4 @@ public class Moon {
 	public void setMoving(boolean moving) {
 		this.moving = moving;
 	}
-	
-	
-	
-	
-	
-	
-
 }
