@@ -6,6 +6,6 @@ Example of a Java program that uses the JavaFX framework, using 2D shapes to dra
 
 ## Authors 🖊️
 
-[JPSanin](https://github.com/JPSanin)
-[TheLordJuanes](https://github.com/TheLordJuanes)
-[SamujV](https://github.com/SamujV)
+- [JPSanin](https://github.com/JPSanin)
+- [TheLordJuanes](https://github.com/TheLordJuanes)
+- [SamujV](https://github.com/SamujV)
