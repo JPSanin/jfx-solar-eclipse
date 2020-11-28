@@ -9,6 +9,7 @@ public class SolarEclipseThread extends Thread {
 	private SolarEclipseGUI seGUI;
 
 	public SolarEclipseThread(Moon[] moons, SolarEclipseGUI seGUI) {
+		setDaemon(true);
 		this.moons = moons;
 		this.seGUI = seGUI;
 	}
